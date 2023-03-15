@@ -1,7 +1,6 @@
-import { Outlet, Route, Routes } from "react-router-dom";
-import Header from "./Header";
-import SideNav from "./SideNav";
-import Home from "../../pages/home";
+import { Outlet } from 'react-router-dom';
+import Header from './Header';
+import SideNav from './SideNav';
 
 function Layout() {
   return (
