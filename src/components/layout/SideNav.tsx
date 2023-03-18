@@ -10,7 +10,9 @@ function SideNav({ className, ...rest }: HeaderProps) {
   return (
     <div className={classNames(className, 'bg-purple-400')} {...rest}>
       {Links.map((link) => (
-        <Link to={link.path}>{link.name}</Link>
+        <Link to={link.path} key={link.id}>
+          {link.name}
+        </Link>
       ))}
     </div>
   );
