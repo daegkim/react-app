@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Accordion from '../../components/layout/Accordion';
 import { Post } from './model';
 import { postService } from './service';
 
@@ -16,11 +17,9 @@ function PostPage() {
   return (
     <div className="p-4">
       {posts.map((post) => (
-        <div key={post.id}>
-          <p>{post.title}</p>
+        <Accordion title={post.title} key={post.id}>
           <p className="whitespace-pre-wrap">{post.body}</p>
-          <br />
-        </div>
+        </Accordion>
       ))}
     </div>
   );

@@ -22,7 +22,7 @@ function Button({ text, icon, ...rest }: ButtonProps) {
       {...rest}
       className="flex items-center border border-solid border-teal-700 px-1 bg-teal-100"
     >
-      <div className={classNames({ 'mr-1': icon })}>{text}</div>
+      <div className={classNames({ 'mr-1': icon }, 'select-none')}>{text}</div>
       {renderIcon()}
     </button>
   );

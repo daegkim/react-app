@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import Button from '../../components/common/Button';
 import InputText from '../../components/common/InputText';
+import Accordion from '../../components/layout/Accordion';
 
 function ComponentPage() {
   const ref = useRef<HTMLInputElement>(null);
@@ -11,6 +12,9 @@ function ComponentPage() {
       <button onClick={() => ref.current?.focus()}>
         <div>hello world</div>
       </button>
+      <Accordion title="long" className="w-40">
+        hello
+      </Accordion>
     </div>
   );
 }
