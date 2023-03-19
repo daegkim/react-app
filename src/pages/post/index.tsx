@@ -16,7 +16,11 @@ function PostPage() {
   return (
     <div className="p-4">
       {posts.map((post) => (
-        <div key={post.id}>{post.title}</div>
+        <div key={post.id}>
+          <p>{post.title}</p>
+          <p className="whitespace-pre-wrap">{post.body}</p>
+          <br />
+        </div>
       ))}
     </div>
   );
