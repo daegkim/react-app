@@ -4,13 +4,19 @@ import { Link } from 'react-router-dom';
 
 interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
 
-const Links = [{ id: 0, path: '/post', name: 'post' }];
+const Links = [
+  { id: 0, path: '/post', name: 'post' },
+  { id: 1, path: '/component', name: 'component' },
+];
 
 function SideNav({ className, ...rest }: HeaderProps) {
   return (
-    <div className={classNames(className, 'bg-purple-400')} {...rest}>
+    <div
+      className={classNames(className, 'flex flex-col bg-purple-400')}
+      {...rest}
+    >
       {Links.map((link) => (
-        <Link to={link.path} key={link.id}>
+        <Link className={'py-2'} to={link.path} key={link.id}>
           {link.name}
         </Link>
       ))}
