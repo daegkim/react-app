@@ -1,22 +1,29 @@
 import classNames from 'classnames';
 import { forwardRef, InputHTMLAttributes, LegacyRef } from 'react';
 
-interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {}
+interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+}
 
 function InputText(
-  { ...rest }: InputTextProps,
+  { label, ...rest }: InputTextProps,
   ref: LegacyRef<HTMLInputElement>
 ) {
   return (
-    <input
-      {...rest}
-      className={classNames(
-        'px-1',
-        'border border-solid border-black',
-        'focus:border-teal-600 outline-none'
-      )}
-      ref={ref}
-    />
+    <>
+      {label && <label htmlFor={`input-${label}`}>{label}</label>}
+      <input
+        id={`input-${label}`}
+        {...rest}
+        className={classNames(
+          'px-1',
+          'border border-solid border-black',
+          'focus:border-teal-600 outline-none',
+          { 'bg-slate-200': rest.readOnly }
+        )}
+        ref={ref}
+      />
+    </>
   );
 }
 
