@@ -7,11 +7,7 @@ interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
 function Header({ className, ...rest }: HeaderProps) {
   return (
     <div
-      className={classNames(
-        className,
-        'h-full w-full bg-orange-500',
-        'flex items-center'
-      )}
+      className={classNames(className, 'bg-orange-500', 'flex items-center')}
       {...rest}
     >
       <Link to="/">home</Link>
