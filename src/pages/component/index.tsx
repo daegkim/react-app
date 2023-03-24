@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import Button from '../../components/common/Button';
 import InputText from '../../components/common/InputText';
-import Accordion from '../../components/layout/Accordion';
+import Accordion from '../../components/common/Accordion';
 
 function ComponentPage() {
   const ref = useRef<HTMLInputElement>(null);

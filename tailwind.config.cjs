@@ -9,6 +9,21 @@ module.exports = {
       gridTemplateColumns: {
         layout: 'theme(space.40) 1fr',
       },
+      keyframes: {
+        fold: {
+          '0%': {
+            transform: 'translateY(0%)',
+          },
+          '100%': {
+            transform: 'translateY(-100%)',
+            display: 'none',
+          },
+        },
+        unfold: {},
+      },
+      animation: {
+        fold: 'fold 1s ease-out forwards',
+      },
     },
   },
   plugins: [],
