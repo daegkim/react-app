@@ -6,7 +6,8 @@ interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
 
 const Links = [
   { id: 0, path: '/post', name: 'post' },
-  { id: 1, path: '/component', name: 'component' },
+  { id: 1, path: '/form', name: 'form' },
+  { id: 2, path: '/component', name: 'component' },
 ];
 
 function SideNav({ className, ...rest }: HeaderProps) {
