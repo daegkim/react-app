@@ -37,9 +37,9 @@ function FormPage() {
     formState: { isDirty, dirtyFields },
   } = methods;
 
-  const [handleSuccess, setHandleSuccess] = useState(
-    () => (data: WorkOrder) => {
-      console.log('hello world');
+  const [handleSuccess, setHandleSuccess] = useState<(data: WorkOrder) => void>(
+    () => () => {
+      alert('아직 버튼에 대한 이벤트가 세팅되지 않았습니다.');
     }
   );
 

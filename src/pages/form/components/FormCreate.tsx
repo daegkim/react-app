@@ -5,7 +5,6 @@ import InputText from '../../../components/common/InputText';
 import { WorkOrder } from '../model';
 
 function FormCreate() {
-  console.log('form create');
   const {
     control,
     reset,
